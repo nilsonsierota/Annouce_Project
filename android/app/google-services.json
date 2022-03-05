@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "35529713752",
+    "firebase_url": "https://anuncios-1498b.firebaseio.com",
+    "project_id": "anuncios-1498b",
+    "storage_bucket": "anuncios-1498b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35529713752:android:21937de0f9ef5345b3c22d",
+        "android_client_info": {
+          "package_name": "com.n1ls0n.anuncios2022"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35529713752-lbnoubqp53uklqm7oskimalfso8caaba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWmn67K8VwmmKSMRTWFSOsrrlqBEak8Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35529713752-lbnoubqp53uklqm7oskimalfso8caaba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
