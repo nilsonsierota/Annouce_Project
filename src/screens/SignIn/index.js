@@ -6,6 +6,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import auth from "@react-native-firebase/auth";
 
 import { styles } from "./styles";
+import { Alert } from "react-native-web";
 
 export function SignIn() {
   const [email, setEmail] = useState("");
@@ -20,10 +21,18 @@ export function SignIn() {
     auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => navigation.navigate("home"))
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error))
+      .finally(() => setIsLoading(false));
   }
 
-  function handleForgotPassword() {}
+  function handleForgotPassword() {
+    auth()
+      .sendPasswordResetEmail(email)
+      .then(() =>
+        Alert.alert("Redefinir senha", "Enviamos um e-mail para voce.")
+      )
+      .catch((error) => console.log(error));
+  }
 
   return (
     <LinearGradient style={styles.container} colors={["orange", "green"]}>
@@ -53,6 +62,10 @@ export function SignIn() {
         onPress={() => navigation.navigate("register")}
       >
         <Text style={styles.buttonText}>Registrar</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={handleForgotPassword}>
+        <Text style={styles.buttonText}>Esqueci a senha</Text>
       </TouchableOpacity>
     </LinearGradient>
   );

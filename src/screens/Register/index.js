@@ -20,7 +20,8 @@ export function Register() {
     auth()
       .createUserWithEmailAndPassword(email, password)
       .then(() => navigation.navigate("signIn"))
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error))
+      .finally(() => setIsLoading(false));
   }
 
   return (
